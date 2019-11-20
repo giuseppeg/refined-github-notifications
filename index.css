@@ -1,0 +1,51 @@
+.notification-unread,
+.notification-unread p {
+  font-weight: bold !important;
+}
+
+.notification-unread p:first-child {
+  font-size: 0.7em !important;
+  font-weight: normal !important;
+}
+
+.rgn-Item {
+  padding-left: 8px;
+  margin-left: -8px;
+  border-left-width: 5px !important;
+  border-left-style: solid !important;
+  border-left-color: transparent !important;
+}
+
+.Label.rgn-Label--mention,
+.Label.rgn-Label--teamMention {
+  color: white !important;
+  background-color: #e50c52 !important;
+}
+.rgn-Item--mention,
+.rgn-Item--mention--teamMention {
+  border-left-color: #e50c52 !important;
+}
+
+.Label.rgn-Label--reviewRequested {
+  color: #333 !important;
+  background-color: #ffa500 !important;
+}
+.rgn-Item--reviewRequested {
+  border-left-color: #ffa500 !important;
+}
+
+.Label.rgn-Label--author {
+  color: white !important;
+  background-color: green !important;
+}
+.rgn-Item--author {
+  border-left-color: green !important;
+}
+
+.Label.rgn-Label--commented {
+  color: white !important;
+  background-color: #5da7f3 !important;
+}
+.rgn-Item--commented {
+  border-left-color: #5da7f3 !important;
+}
