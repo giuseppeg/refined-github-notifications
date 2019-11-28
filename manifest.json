@@ -1,6 +1,6 @@
 {
   "name": "Refined GitHub Notifications",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Add UI improvements to the new GitHub Notifications page",
   "homepage_url": "https://github.com/giuseppeg/refined-twitter-lite",
   "manifest_version": 2,
@@ -12,7 +12,8 @@
     {
       "run_at": "document_end",
       "matches": [
-        "https://github.com/notifications/*"
+        "https://github.com/notifications/beta",
+        "https://github.com/notifications/beta?*"
       ],
       "js": [
         "index.user.js"

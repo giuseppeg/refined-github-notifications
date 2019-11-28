@@ -1,8 +1,9 @@
 // ==UserScript==
 // @name refined-github-notifications
 // @description Add UI improvements to the new GitHub Notifications page
-// @version 0.1.0
-// @match https://github.com/notifications/*
+// @version 0.1.1
+// @match https://github.com/notifications/beta
+// @match https://github.com/notifications/beta?*
 // ==/UserScript==
 (function () {
   function addClasses() {
