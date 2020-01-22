@@ -21,7 +21,7 @@
   }
 
   function alwaysShowFull() {
-    Array.from(document.querySelectorAll('.notifications-list-item .flex-row:first-child a[href]')).forEach(anchor => {
+    Array.from(document.querySelectorAll('.notification-list-item-link')).forEach(anchor => {
       if (anchor.href.includes(showAllMessagesParameter)) return
       anchor.href = anchor.href + showAllMessagesParameter
     })
