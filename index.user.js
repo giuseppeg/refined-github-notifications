@@ -18,7 +18,20 @@
     })
   }
 
-  document.body.addEventListener('pjax:complete', addClasses)
+  function alwaysShowFull() {
+    Array.from(document.querySelectorAll('.notifications-list-item .flex-row:first-child a[href]')).forEach(anchor => {
+      const showAllMessagesParameter = '&show_full=true'
+      if (anchor.href.includes(showAllMessagesParameter)) return
+      anchor.href = anchor.href + showAllMessagesParameter
+    })
+  }
 
-  addClasses()
+  function applyModifications() {
+    addClasses()
+    alwaysShowFull()
+  }
+
+  document.body.addEventListener('pjax:complete', applyModifications)
+
+  applyModifications()
 }())
