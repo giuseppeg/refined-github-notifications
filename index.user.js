@@ -6,6 +6,8 @@
 // @match https://github.com/notifications/beta?*
 // ==/UserScript==
 (function () {
+  const showAllMessagesParameter = '&show_full=true'
+
   function addClasses() {
     Array.from(document.querySelectorAll('.Label')).forEach(label => {
       const labelName = label.textContent.trim().replace(/\s+([a-z])/, (...args) => args[1].toUpperCase())
@@ -20,7 +22,6 @@
 
   function alwaysShowFull() {
     Array.from(document.querySelectorAll('.notifications-list-item .flex-row:first-child a[href]')).forEach(anchor => {
-      const showAllMessagesParameter = '&show_full=true'
       if (anchor.href.includes(showAllMessagesParameter)) return
       anchor.href = anchor.href + showAllMessagesParameter
     })
