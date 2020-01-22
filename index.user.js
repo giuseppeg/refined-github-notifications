@@ -6,7 +6,7 @@
 // @match https://github.com/notifications/beta?*
 // ==/UserScript==
 (function () {
-  const showAllMessagesParameter = '&show_full=true'
+  const showAllMessagesParameter = 'show_full=true'
 
   function addClasses() {
     Array.from(document.querySelectorAll('.Label')).forEach(label => {
