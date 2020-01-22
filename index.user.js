@@ -23,7 +23,7 @@
   function alwaysShowFull() {
     Array.from(document.querySelectorAll('.notification-list-item-link')).forEach(anchor => {
       if (anchor.search.includes(showAllMessagesParameter)) return
-      anchor.href = anchor.href + showAllMessagesParameter
+      anchor.search += (anchor.search.startsWith('?') ? '&' : '?') + showAllMessagesParameter
     })
   }
 
