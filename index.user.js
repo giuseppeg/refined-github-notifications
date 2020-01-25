@@ -11,10 +11,14 @@
   function addClasses() {
     Array.from(document.querySelectorAll('.Label')).forEach(label => {
       const labelName = label.textContent.trim().replace(/\s+([a-z])/, (...args) => args[1].toUpperCase())
-      if (labelName.startsWith('+')) { return }
+      let container = label.closest('li')
+      if (
+        labelName.startsWith('+') ||
+        !container ||
+        !(container = container.firstElementChild)
+      ) { return }
       label.classList.add('rgn-Label')
       label.classList.add(`rgn-Label--${labelName}`)
-      const container = label.closest('li').firstElementChild
       container.classList.add(`rgn-Item`)
       container.classList.add(`rgn-Item--${labelName}`)
     })
